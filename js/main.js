@@ -2,7 +2,7 @@
 * @Author: Andersen
 * @Date:   2016-03-13 16:10:25
 * @Last Modified by:   Andersen
-* @Last Modified time: 2016-04-08 11:20:47
+* @Last Modified time: 2016-04-11 18:01:10
 */
 $('.load > p').html("正在加载");
 document.write('<script src="./html/js/TweenLite.min.js"></script>');
@@ -52,12 +52,18 @@ $('.nav > .menu-btn').click(function() {
 	mainBodySize(a);
 });
 // 菜单工具提示
-$('.menu-list > .btn').mouseover(function() {
-		$(this).data('placement', 'right');
-		$(this).data('animation', false);
-		// $(this).data('delay',200);
-			$(this).tooltip('show');
-});
+$('.menu-list > .btn')
+  .popup({
+    inline   : false,
+    hoverable: true,
+    position : 'right center',
+    variation:'inverted',
+    transition:'horizontal flip',
+    delay: {
+      show: 100,
+      hide: 200
+    }
+	});
 //主体部分尺寸控制
     function mainBodySize (wind) {
         var mainBody = $('.main-body');
@@ -114,7 +120,9 @@ $('.menu-list > .btn').mouseover(function() {
 	});
 	// msgbox
 	function msgBox(id,toggle) {
-		$(id).modal(toggle);
+		$(id)
+		.modal('setting', 'closable', false)
+		.modal(toggle);
 	}
 	// download
 	$('#dlBtn').click(function() {

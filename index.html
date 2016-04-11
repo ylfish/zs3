@@ -9,7 +9,7 @@
     <title>HTML调试阶段</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="stylesheet" href="./FontAwesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Semantic/semantic.min.css">
     <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -26,27 +26,27 @@
                     <a href="" class="fa fa-yc logo "></a>
                 </div>
 	    		<ul class="menu-list">
-                    <li class="btn active" id="menu1" data-title="H&nbsp;o&nbsp;m&nbsp;e" data-box="#box1">
+                    <li class="btn active" id="menu1" data-content="首页" data-box="#box1">
                         <a>Home<h6>欢迎</h6></a>
                         <span class="list-icon fa fa-home"></span>
                         <div class="menu-border"></div>
                     </li>
-                    <li class="btn" id="menu2" data-title="W&nbsp;o&nbsp;r&nbsp;k&nbsp;s" data-box="#box2">
+                    <li class="btn" id="menu2" data-content="作品" data-box="#box2">
                         <a>Works<h6>作品</h6></a>
                         <span class="list-icon fa fa-image"></span>
                         <div class="menu-border"></div>
                     </li>
-                    <li class="btn" id="menu3" data-title="M&nbsp;o&nbsp;r&nbsp;e" data-box="#box3">
+                    <li class="btn" id="menu3" data-content="更多" data-box="#box3">
                         <a>More<h6>更多</h6></a>
                         <span class="list-icon fa fa-star-o"></span>
                         <div class="menu-border"></div>
                     </li>
-                    <li class="btn" id="menu4" data-title="C&nbsp;o&nbsp;n&nbsp;t&nbsp;a&nbsp;c&nbsp;t" data-box="#box4">
+                    <li class="btn" id="menu4" data-content="联系我" data-box="#box4">
                         <a>Contact<h6>联系我</h6></a>
                         <span class="list-icon fa fa-weixin"></span>
                         <div class="menu-border"></div>
                     </li>
-                    <li class="btn" data-title="Download&nbsp;the&nbsp;code,包含html，js，sass等，全套前端框架" data-box="" id="dlBtn">
+                    <li class="btn" data-content="下载源代码-包含html，js，sass等，全套前端框架" data-box="" id="dlBtn">
                         <a>Download<h6>下载</h6></a>
                         <span class="list-icon fa fa-download"></span>
                         <div class="menu-border"></div>
@@ -100,33 +100,28 @@
     </body>
 </html>
     <!-- 弹窗-->
-        <div class="modal fade" data-backdrop="static" id="dlBox">
-            <div class="modal-dialog" role="document">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header" >
-                            <h4 class="modal-title" ><span class="fa fa-download font-icon"></span>Download</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>OK?</p>
-                            <p>OK?</p>
-                            <p>OK?</p>
-                            <p>OK?</p>
-                            <p>OK?</p>
-                            <p>OK?</p>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="package-icon"></div>
-                            <a class="btn btn-default faded" data-dismiss="modal" id="close">取消</a>
-                            <a class="btn btn-warning faded"><span class="fa fa-download font-icon"></span> Download</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="ui basic modal"id="dlBox">
+            <div class="header" >
+                <h4><span class="fa fa-download font-icon"></span>Download</h4>
+            </div>
+            <div class="content">
+                <p>OK?</p>
+                <p>OK?</p>
+                <p>OK?</p>
+                <p>OK?</p>
+                <p>OK?</p>
+                <p>OK?</p>
+            </div>
+            <div class="actions">
+                <div class="package-icon"></div>
+                <a class="ui labeled button" data-dismiss="modal" id="close">取消</a>
+                <a class="ui labeled icon teal button"><i class="fa fa-download icon"></i> Download</a>
             </div>
         </div>
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/main.js"></script>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./Semantic/semantic.min.js"></script>
+<script src="./js/main.js"></script>
 <!-- @authors Andersen  -->
 <!-- @974986907@qq.com -->
 <!-- @date    2016-03-13 14:55:29 -->
