@@ -2,17 +2,17 @@
 * @Author: Andersen
 * @Date:   2016-03-13 16:10:25
 * @Last Modified by:   Andersen
-* @Last Modified time: 2016-04-12 09:48:30
+* @Last Modified time: 2016-04-12 13:51:52
 */
 $('.load > p').html("正在加载");
 // 页面加载完成
 window.onload = function() {
 
 	if (!$.support.leadingWhitespace) {
-		$('.load > span').removeClass('fa-hourglass');
-		$('.load > span').removeClass('fa-spin');
-		$('.load > span').addClass('fa-thumbs-o-down');
-		$('.load > span').html("<h1>Loser</h1>");
+		$('.load > i').removeClass('notched circle');
+		$('.load > i').removeClass('loading');
+		$('.load > i').addClass('thumbs outline down');
+		$('.load > i').html("<h1>Loser</h1>");
 		$('.load > h2').html("使用老旧IE浏览器的咸鱼没有浏览高端网页的资格<h5>IE 6-8 这些天诛地灭的古老版本不被支持，你可以升级到IE9以上,或者使用：Firefox，opera，safari和带有webkit内核的国产浏览器</h5>");
 		$('.main').remove();
 	}else{
@@ -100,11 +100,11 @@ $('.menu-list > .btn')
 			$('.menu-list > .btn').removeClass('active');
 			$('#menu2').addClass('active');
 		};
-		if (winPos >= pos3 && winPos <= pos4) {
+		if (winPos >= pos3-10 && winPos <= pos4-10) {
 			$('.menu-list > .btn').removeClass('active');
 			$('#menu3').addClass('active');
 		};
-		if (winPos >= pos4) {
+		if (winPos >= pos4-10) {
 			$('.menu-list > .btn').removeClass('active');
 			$('#menu4').addClass('active');
 		};
@@ -134,6 +134,10 @@ $('.menu-list > .btn')
 	$('.down-btn').click(function() {
 		$('html,body').animate({scrollTop:$('#box2').offset().top}, 800);
 	});
+	// 卡片Hover事件
+	$('.img-box .card .image').dimmer({
+	  on: 'hover'
+	});
 // jquery结束
 });
 	// 首页动画开始
@@ -157,6 +161,7 @@ $('.menu-list > .btn')
 						$('.text-box > h3').addClass('text-in2');
 						var i = 0;
 						var z = 4;//循环数量控制
+						var x = 1;
 						t2 = window.setInterval(function(){
 								i = i+1;
 								var c1 = '.down-' + i;
@@ -166,10 +171,15 @@ $('.menu-list > .btn')
 								// } else {
 								// 	c2 = '.down-' + (i-1);
 								// }
-								$(c1).toggleClass('active');
+								if (x!=1) {
+									$(c1).removeClass('active');
+								} else {
+									$(c1).addClass('active');
+								};
 								// $(c2).toggleClass('active');
 								if (i == z) {
-									i=0
+									i=0;
+									x=~x;
 								};
 						}, 400);
 						setTimeout(function (){
@@ -198,7 +208,7 @@ $('.menu-list > .btn')
 			$('.text-box > h3').removeClass('text-in1');
 			$('.text-box > h3').removeClass('text-in2');
 			$('.down-btn').removeClass('active');
-			$('.text-box li span').removeClass('active');
+			$('.text-box li i').removeClass('active');
 			window.clearInterval(t1);
 			window.clearInterval(t2);
 		}

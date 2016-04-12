@@ -8,12 +8,11 @@
         <!-- 以上标签必须放在最顶端 -->
     <title>HTML调试阶段</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-    <link rel="stylesheet" href="./FontAwesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="./Semantic/semantic.min.css">
     <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
-    	<div class="load well"><span class="fa fa-hourglass fa-spin"></span><h2>正在加载</h2></div>
+    	<div class="load well"><i class="notched circle loading icon"></i><h2>正在加载</h2></div>
     	<div class="main">
 	    	<nav class="nav  nav-blur">
             <div class="nav-bg "></div>
@@ -28,27 +27,27 @@
 	    		<ul class="menu-list">
                     <li class="btn active" id="menu1" data-content="首页" data-box="#box1">
                         <a>Home<h6>欢迎</h6></a>
-                        <span class="list-icon fa fa-home"></span>
+                        <i class="home icon"></i>
                         <div class="menu-border"></div>
                     </li>
                     <li class="btn" id="menu2" data-content="作品" data-box="#box2">
                         <a>Works<h6>作品</h6></a>
-                        <span class="list-icon fa fa-image"></span>
+                        <i class="idea icon"></i>
                         <div class="menu-border"></div>
                     </li>
                     <li class="btn" id="menu3" data-content="更多" data-box="#box3">
                         <a>More<h6>更多</h6></a>
-                        <span class="list-icon fa fa-star-o"></span>
+                        <i class="star icon"></i>
                         <div class="menu-border"></div>
                     </li>
                     <li class="btn" id="menu4" data-content="联系我" data-box="#box4">
                         <a>Contact<h6>联系我</h6></a>
-                        <span class="list-icon fa fa-weixin"></span>
+                        <i class="wechat icon"></i>
                         <div class="menu-border"></div>
                     </li>
                     <li class="btn" data-content="下载源代码-包含html，js，sass等，全套前端框架" data-box="" id="dlBtn">
                         <a>Download<h6>下载</h6></a>
-                        <span class="list-icon fa fa-download"></span>
+                        <i class="download icon"></i>
                         <div class="menu-border"></div>
                     </li>
 	    		</ul>
@@ -68,21 +67,167 @@
                     <a class="text-hader"><em></em>测试用的文字</a>
                     <h3>测试用的文字-副标题</h3>
                     <ul class="text-down">
-                        <li><span class="down-1 fa fa-angle-down"></span></li>
-                        <li><span class="down-2 fa fa-angle-down"></span></li>
-                        <li><span class="down-3 fa fa-angle-down"></span></li>
-                        <li><span class="down-4 fa fa-angle-down"></span></li>
-                        <li class="down-btn"><span class="down-btn1 fa fa-angle-down"></span><span class="down-btn2"></span></li>
+                        <li><i class="down-1 angle down icon"></i></li>
+                        <li><i class="down-2 angle down icon"></i></li>
+                        <li><i class="down-3 angle down icon"></i></li>
+                        <li><i class="down-4 angle down icon"></i></li>
+                        <li class="down-btn"><i class="down-btn1 angle down icon"></i><span class="down-btn2"></span></li>
                     </ul>
                    </div>
                 </div>
                 <div class="box" id="box2">
-                    <div class="img-box img1"></div>
-                    <div class="img-box img2"></div>
-                    <div class="img-box img3"></div>
-                    <div class="img-box img4"></div>
-                    <div class="img-box img5"></div>
-                    <div class="img-box img6"></div>
+                    <div class="ui three stackable  cards img-box">
+                        <div class="card">
+                            <div class="blurring dimmable image">
+                                <div class="ui dimmer">
+                                  <div class="content">
+                                    <div class="center">
+                                      <div class="ui inverted button">查看详情</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <img src="./img/tx.jpg">
+                            </div>
+                            <div class="content">
+                              <h3>主标题</h3>
+                              <div class="meta">
+                                <a class="group">副标题</a>
+                              </div>
+                              <div class="description">
+                                详细内容介绍。
+                              </div>
+                            </div>
+                            <div class="extra content">
+                              <a><i class="fork icon"></i>项目</a>
+                              <a class="right floated"><i class="idea icon"></i>原创</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="blurring dimmable image">
+                                <div class="ui dimmer">
+                                  <div class="content">
+                                    <div class="center">
+                                      <div class="ui inverted button">查看详情</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <img src="./img/tx.jpg">
+                            </div>
+                            <div class="content">
+                              <h3>主标题</h3>
+                              <div class="meta">
+                                <a class="group">副标题</a>
+                              </div>
+                              <div class="description">
+                                详细内容介绍。
+                              </div>
+                            </div>
+                            <div class="extra content">
+                              <a><i class="fork icon"></i>项目</a>
+                              <a class="right floated"><i class="idea icon"></i>原创</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="blurring dimmable image">
+                                <div class="ui dimmer">
+                                  <div class="content">
+                                    <div class="center">
+                                      <div class="ui inverted button">查看详情</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <img src="./img/tx.jpg">
+                            </div>
+                            <div class="content">
+                              <h3>主标题</h3>
+                              <div class="meta">
+                                <a class="group">副标题</a>
+                              </div>
+                              <div class="description">
+                                详细内容介绍。
+                              </div>
+                            </div>
+                            <div class="extra content">
+                              <a><i class="fork icon"></i>项目</a>
+                              <a class="right floated"><i class="idea icon"></i>原创</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="blurring dimmable image">
+                                <div class="ui dimmer">
+                                  <div class="content">
+                                    <div class="center">
+                                      <div class="ui inverted button">查看详情</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <img src="./img/tx.jpg">
+                            </div>
+                            <div class="content">
+                              <h3>主标题</h3>
+                              <div class="meta">
+                                <a class="group">副标题</a>
+                              </div>
+                              <div class="description">
+                                详细内容介绍。
+                              </div>
+                            </div>
+                            <div class="extra content">
+                              <a><i class="fork icon"></i>项目</a>
+                              <a class="right floated"><i class="idea icon"></i>原创</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="blurring dimmable image">
+                                <div class="ui dimmer">
+                                  <div class="content">
+                                    <div class="center">
+                                      <div class="ui inverted button">查看详情</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <img src="./img/tx.jpg">
+                            </div>
+                            <div class="content">
+                              <h3>主标题</h3>
+                              <div class="meta">
+                                <a class="group">副标题</a>
+                              </div>
+                              <div class="description">
+                                详细内容介绍。
+                              </div>
+                            </div>
+                            <div class="extra content">
+                              <a><i class="fork icon"></i>项目</a>
+                              <a class="right floated"><i class="idea icon"></i>原创</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="blurring dimmable image">
+                                <div class="ui dimmer">
+                                  <div class="content">
+                                    <div class="center">
+                                      <div class="ui inverted button">查看详情</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <img src="./img/tx.jpg">
+                            </div>
+                            <div class="content">
+                              <h3>主标题</h3>
+                              <div class="meta">
+                                <a class="group">副标题</a>
+                              </div>
+                              <div class="description">
+                                详细内容介绍。
+                              </div>
+                            </div>
+                            <div class="extra content">
+                              <a><i class="fork icon"></i>项目</a>
+                              <a class="right floated"><i class="idea icon"></i>原创</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="box" id="box3">
                     <h2>测试用的大文字2</h2>
@@ -99,7 +244,7 @@
     <!-- 弹窗-->
         <div class="ui basic modal"id="dlBox">
             <div class="header" >
-                <h4><span class="fa fa-download font-icon"></span>Download</h4>
+                <h4><i class="download icon"></i>Download</h4>
             </div>
             <div class="content">
                 <p>OK?</p>
@@ -112,7 +257,7 @@
             <div class="actions">
                 <div class="package-icon"></div>
                 <a class="ui labeled button" data-dismiss="modal" id="close">取消</a>
-                <a class="ui labeled icon teal button"><i class="fa fa-download icon"></i> Download</a>
+                <a class="ui labeled icon teal button"><i class="github icon"></i> Download</a>
             </div>
         </div>
 

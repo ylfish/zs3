@@ -2,7 +2,7 @@
 * @Author: Andersen
 * @Date:   2016-03-13 15:21:37
 * @Last Modified by:   Andersen
-* @Last Modified time: 2016-04-12 09:53:20
+* @Last Modified time: 2016-04-12 13:41:07
 */
 .blur {
   -webkit-filter: blur(5px);
@@ -15,13 +15,12 @@
   src: url(../fonts/FZLTCXHJW.TTF); }
 body, html {
   width: 100%;
-  height: 100%;
-  background-color: #eee; }
+  height: 100%; }
 
 ul, ol, li {
   list-style-type: none; }
 
-p, a, h1, h2, h3, h4, h5, h6, span, em, i, li, div, span {
+p, a, h1, h2, h3, h4, h5, h6, span, em, i, li, div, span, div, body {
   font-family: "Microsoft YaHei"; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,14 +52,19 @@ a, a:focus, .list-icon, .list-icon:focus {
   width: 900px;
   margin: 0 auto;
   padding: 25px 0;
-  top: 80px; }
-  .load span {
-    font-size: 64px;
-    padding: 20px;
-    color: #999; }
+  top: 80px;
+  background-color: #fafafa;
+  border-radius: 4px;
+  border: 1px solid #ddd; }
+  .load i {
+    font-size: 48px;
+    color: #999;
+    width: 400px;
+    margin: 0 auto; }
   .load h1 {
     font-weight: 900;
-    letter-spacing: 12px; }
+    letter-spacing: 12px;
+    padding-top: 15px; }
   .load h2 {
     margin-top: 15px;
     letter-spacing: 4px; }
@@ -141,8 +145,6 @@ a, a:focus, .list-icon, .list-icon:focus {
     -moz-transition: all 0.6s ease-in-out;
     -webkit-transition: all 0.6s ease-in-out;
     z-index: 1; }
-    .nav .menu-btn > .btn:hover {
-      border-bottom: 1px solid #fff; }
     .nav .menu-btn > .btn.active {
       padding-right: 100px;
       opacity: 0;
@@ -177,10 +179,10 @@ a, a:focus, .list-icon, .list-icon:focus {
         text-align: left; }
         .nav .menu-list .btn a h6 {
           margin-top: 2px; }
-      .nav .menu-list .btn span {
+      .nav .menu-list .btn i {
         float: right;
         color: #fff;
-        padding-top: 14px;
+        padding-top: 8px;
         width: 50px;
         text-align: center;
         font-size: 24px; }
@@ -259,8 +261,7 @@ a, a:focus, .list-icon, .list-icon:focus {
   .main-body .box {
     width: 100%;
     min-height: 100%;
-    background-repeat: no-repeat; }
-  .main-body .box {
+    background-repeat: no-repeat;
     margin: 0;
     padding: 15px; }
 
@@ -287,13 +288,13 @@ a, a:focus, .list-icon, .list-icon:focus {
     -moz-filter: blur(5px);
     -ms-filter: blur(5px);
     filter: blur(5px); }
-  .nav-blur a, .nav-blur span {
+  .nav-blur a, .nav-blur i {
     color: rgba(255, 255, 255, 0.45) !important; }
-    .nav-blur a:hover, .nav-blur span:hover {
+    .nav-blur a:hover, .nav-blur i:hover {
       color: rgba(255, 255, 255, 0.95) !important; }
   .nav-blur .menu-list .btn:hover {
     background-color: rgba(255, 255, 255, 0.1); }
-    .nav-blur .menu-list .btn:hover span {
+    .nav-blur .menu-list .btn:hover i {
       color: rgba(255, 255, 255, 0.95) !important; }
   .nav-blur .active {
     background-position: 0 0; }
@@ -384,7 +385,7 @@ a, a:focus, .list-icon, .list-icon:focus {
       #box1x .text-box .text-down li {
         padding: 0;
         line-height: 24px; }
-      #box1x .text-box .text-down span, #box1x .text-box .text-down a {
+      #box1x .text-box .text-down i, #box1x .text-box .text-down a {
         color: rgba(255, 255, 255, 0.75);
         font-size: 32px;
         transition: all 1.2s ease-in-out;
@@ -468,18 +469,12 @@ a, a:focus, .list-icon, .list-icon:focus {
         #box1x .text-box a em.active {
           left: 1300px; }
 
-#box2 {
-  padding: 1%;
-  height: 100%; }
-
-.img-box {
-  display: inline-block;
-  margin: 0.5%;
-  padding: 0;
-  width: 32%;
-  height: 48.5%;
-  background-color: #ddd;
-  cursor: pointer; }
+.img-box .card .image {
+  background-color: #eee; }
+  .img-box .card .image img {
+    width: 100%; }
+.img-box .card a:hover {
+  color: #FFDA52 !important; }
 
 .package-icon {
   background-image: url("../img/icon.png");
