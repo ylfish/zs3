@@ -2,7 +2,7 @@
 * @Author: Andersen
 * @Date:   2016-03-13 15:21:37
 * @Last Modified by:   Andersen
-* @Last Modified time: 2016-04-12 13:41:07
+* @Last Modified time: 2016-04-12 16:37:33
 */
 @charset"utf-8";// 编码声明
 // 文件引用
@@ -221,7 +221,7 @@ a,a:focus,.list-icon,.list-icon:focus{
 					margin-top: 2px;
 				}
 			}
-			i{
+			.list-icon{
 				float: right;
 				color:#fff;
 				padding-top: 8px;
@@ -245,9 +245,10 @@ a,a:focus,.list-icon,.list-icon:focus{
 	.nav-logo{
 		color:#fff;
 		text-align: center;
-		a{
+		i{
 			margin: 30px 0 15px 0;
 			left:0px;
+			top:30px;
 			font-size:86px;
 			position: relative;
 			@include faded(all,0.8s);
@@ -257,7 +258,8 @@ a,a:focus,.list-icon,.list-icon:focus{
 			}
 			&.active{
 				font-size:32px;
-				left:75px;
+				left:74px;
+				top:10px;
 			}
 		}
 	}
@@ -460,7 +462,7 @@ a,a:focus,.list-icon,.list-icon:focus{
 				&:hover{
 					.down-btn2{
 						top:20px;
-						left:20px;
+						left:18px;
 						width: 48px;
 						height:48px;
 						border-color: rgba(#fff, 0.75);
@@ -529,4 +531,12 @@ a,a:focus,.list-icon,.list-icon:focus{
 	margin-left:45px;
 	margin-top: 8px;
 	float: left;
+}
+#box2{
+	.shape{
+		display:inline;
+		.card{
+			width: 100%;
+		}
+	}
 }

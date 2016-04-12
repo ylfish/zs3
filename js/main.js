@@ -2,7 +2,7 @@
 * @Author: Andersen
 * @Date:   2016-03-13 16:10:25
 * @Last Modified by:   Andersen
-* @Last Modified time: 2016-04-12 13:51:52
+* @Last Modified time: 2016-04-12 15:36:25
 */
 $('.load > p').html("正在加载");
 // 页面加载完成
@@ -137,6 +137,10 @@ $('.menu-list > .btn')
 	// 卡片Hover事件
 	$('.img-box .card .image').dimmer({
 	  on: 'hover'
+	});
+	// 卡片翻页
+	$('.img-btn-1').click(function() {
+		$('#box2 .shape').shape('flip over','.side2');
 	});
 // jquery结束
 });
