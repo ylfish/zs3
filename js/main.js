@@ -2,12 +2,9 @@
 * @Author: Andersen
 * @Date:   2016-03-13 16:10:25
 * @Last Modified by:   Andersen
-* @Last Modified time: 2016-04-11 18:01:10
+* @Last Modified time: 2016-04-12 09:48:30
 */
 $('.load > p').html("正在加载");
-document.write('<script src="./html/js/TweenLite.min.js"></script>');
-document.write('<script src="./html/js/EasePack.min.js"></script>');
-document.write('<script src="./html/js/demo-1.js"></script>');
 // 页面加载完成
 window.onload = function() {
 
