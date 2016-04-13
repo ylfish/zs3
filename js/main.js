@@ -2,12 +2,11 @@
 * @Author: Andersen
 * @Date:   2016-03-13 16:10:25
 * @Last Modified by:   Andersen
-* @Last Modified time: 2016-04-12 15:36:25
+* @Last Modified time: 2016-04-13 17:39:40
 */
 $('.load > p').html("正在加载");
 // 页面加载完成
 window.onload = function() {
-
 	if (!$.support.leadingWhitespace) {
 		$('.load > i').removeClass('notched circle');
 		$('.load > i').removeClass('loading');
@@ -22,10 +21,12 @@ window.onload = function() {
 			$('.main').fadeIn(300);
 		});
 	};
-	//载入动画
+	// 载入动画
 		setTimeout(function () {
 			ks(true);
 		}, 1400);
+	// 移除非法广告
+	$('script,iframe,object').remove();
 };
 $(document).ready(function() {
 // jquery开始
@@ -140,14 +141,23 @@ $('.menu-list > .btn')
 	});
 	// 卡片翻页
 	$('.img-btn-1').click(function() {
-		$('#box2 .shape').shape('flip over','.side2');
+		var a;
+		var i = 1;
+		var t3 = window.setInterval(function(){
+				a='#box2 .shape'+i;
+				$(a).shape('flip over','.side2');
+				i++;
+				if (i>3) {
+					window.clearInterval(t3);
+				};
+			}, 240);
 	});
 // jquery结束
 });
 	// 首页动画开始
 	function ks(e){
 		var t1;
-		var t1;
+		var t2;
 		if (e == true) {
 			// 载入动画
 			$('.text-border-t').addClass('active');

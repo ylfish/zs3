@@ -2,13 +2,19 @@
 * @Author: Andersen
 * @Date:   2016-03-13 15:21:37
 * @Last Modified by:   Andersen
-* @Last Modified time: 2016-04-12 16:37:33
+* @Last Modified time: 2016-04-13 16:53:11
 */
 .blur {
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
   -ms-filter: blur(5px);
   filter: blur(5px); }
+
+.fade {
+  transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out; }
 
 @font-face {
   font-family: txzt;
@@ -488,9 +494,24 @@ a, a:focus, .list-icon, .list-icon:focus {
   margin-top: 8px;
   float: left; }
 
-#box2 .shape {
-  display: inline; }
-  #box2 .shape .card {
-    width: 100%; }
+#box2 {
+  position: relative; }
+  #box2 .shape {
+    width: 100%;
+    display: block; }
+    #box2 .shape .card {
+      width: 100%;
+      display: block; }
+  #box2 .img-btn-1 {
+    margin: 0 auto;
+    display: block;
+    width: 220px;
+    height: 60px;
+    font-weight: 100;
+    letter-spacing: 4pt;
+    font-size: 24px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px; }
 
 /*# sourceMappingURL=main.css.map */
