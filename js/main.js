@@ -2,35 +2,35 @@
 * @Author: Andersen
 * @Date:   2016-03-13 16:10:25
 * @Last Modified by:   Andersen
-* @Last Modified time: 2016-04-13 17:39:40
+* @Last Modified time: 2016-04-15 13:31:01
 */
 $('.load > p').html("正在加载");
 // 页面加载完成
 window.onload = function() {
-	if (!$.support.leadingWhitespace) {
-		$('.load > i').removeClass('notched circle');
-		$('.load > i').removeClass('loading');
-		$('.load > i').addClass('thumbs outline down');
-		$('.load > i').html("<h1>Loser</h1>");
-		$('.load > h2').html("使用老旧IE浏览器的咸鱼没有浏览高端网页的资格<h5>IE 6-8 这些天诛地灭的古老版本不被支持，你可以升级到IE9以上,或者使用：Firefox，opera，safari和带有webkit内核的国产浏览器</h5>");
-		$('.main').remove();
-	}else{
-		$('.load > h2').html("加载完成");
-		$('.load').fadeOut(400,function() {
-			$('.load').remove();
-			$('.main').fadeIn(300);
-		});
-	};
-	// 载入动画
-		setTimeout(function () {
-			ks(true);
-		}, 1400);
 	// 移除非法广告
 	$('script,iframe,object').remove();
 };
 $(document).ready(function() {
 // jquery开始
         // 初始
+        if (!$.support.leadingWhitespace) {
+        	$('.load > i').removeClass('notched circle');
+        	$('.load > i').removeClass('loading');
+        	$('.load > i').addClass('thumbs outline down');
+        	$('.load > i').html("<h1>Loser</h1>");
+        	$('.load > h2').html("使用老旧IE浏览器的咸鱼没有浏览高端网页的资格<h5>IE 6-8 这些天诛地灭的古老版本不被支持，你可以升级到IE9以上,或者使用：Firefox，opera，safari和带有webkit内核的国产浏览器</h5>");
+        	$('.main').remove();
+        }else{
+        	$('.load > h2').html("加载完成");
+        	$('.load').fadeOut(400,function() {
+        		$('.load').remove();
+        		$('.main').fadeIn(300);
+        	});
+        };
+        // 载入动画
+        	setTimeout(function () {
+        		ks(true);
+        	}, 1400);
         mainBodySize(false);
         // //窗口变更自适应
         $(window).resize(function(){
@@ -120,16 +120,17 @@ $('.menu-list > .btn')
 	function msgBox(id,toggle) {
 		$(id)
 		.modal('setting', 'closable', false)
+	  .modal({
+	  	onHide:function() {
+				$('.main').removeClass('blur');
+	  	}
+	  })
 		.modal(toggle);
-	}
+		$('.main').addClass('blur');
+	};
 	// download
 	$('#dlBtn').click(function() {
-		$('.main').addClass('blur');
 		msgBox('#dlBox','show');
-	});
-	$('#close').click(function() {
-		msgBox('#dlBox','hide');
-		$('.main').removeClass('blur');
 	});
 	// 开始按钮
 	$('.down-btn').click(function() {
@@ -151,6 +152,27 @@ $('.menu-list > .btn')
 					window.clearInterval(t3);
 				};
 			}, 240);
+	});
+	// 卡片详情
+	$('#box2 .shape .button').click(function() {
+		var title  = $(this).data('title');
+		$('#works-show img').attr('src', $(this).data('imgsrc'));
+		$('#works-show .header h4').html(title);
+		// 弹出框
+		setTimeout(function () {
+			$('#works-show')
+		  .modal({
+		  	onHide:function() {
+					$('.main').removeClass('blur');
+		  	}
+		  })
+		  .modal('show');
+			$('.main').addClass('blur');
+		}, 10);
+		// 等待图片加载完成
+		// $('#works-show img').load(function() {
+		// 	alert('wanc');
+		// });
 	});
 // jquery结束
 });
@@ -227,4 +249,14 @@ $('.menu-list > .btn')
 			window.clearInterval(t2);
 		}
 	};
+	// $.fn.extend({
+	// 	imgLoad:function (callback) {
+	// 			      var timer = setInterval(function() {
+	// 			          if ($(this).complete) {
+	// 			              callback($(this))
+	// 			              clearInterval(timer)
+	// 			          }
+	// 			      }, 50)
+ //  					};
+	// });
 

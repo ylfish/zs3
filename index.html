@@ -86,14 +86,14 @@
                                                 <div class="ui dimmer">
                                                   <div class="content">
                                                     <div class="center">
-                                                      <div class="ui inverted button">查看详情</div>
+                                                      <div class="ui inverted button" data-imgsrc="img/home-bg2.jpg" data-title="img/home-bg2.jpg">查看详情</div>
                                                     </div>
                                                   </div>
                                                 </div>
                                                 <img src="./img/tx.jpg">
                                             </div>
                                             <div class="content">
-                                              <h3>主标题1</h3>
+                                              <h3 class="title">主标题1</h3>
                                               <div class="meta">
                                                 <a class="group">副标题</a>
                                               </div>
@@ -113,14 +113,14 @@
                                                 <div class="ui dimmer">
                                                   <div class="content">
                                                     <div class="center">
-                                                      <div class="ui inverted button">查看详情</div>
+                                                      <div class="ui inverted button" data-imgsrc="img/home-bg1.jpg">查看详情</div>
                                                     </div>
                                                   </div>
                                                 </div>
                                                 <img src="./img/tx.jpg">
                                             </div>
                                             <div class="content">
-                                              <h3>主标题2</h3>
+                                              <h3 class="title">主标题2</h3>
                                               <div class="meta">
                                                 <a class="group">副标题</a>
                                               </div>
@@ -146,14 +146,14 @@
                                                 <div class="ui dimmer">
                                                   <div class="content">
                                                     <div class="center">
-                                                      <div class="ui inverted button">查看详情</div>
+                                                      <div class="ui inverted button" data-imgsrc="img/tx.jpg">查看详情</div>
                                                     </div>
                                                   </div>
                                                 </div>
                                                 <img src="./img/tx.jpg">
                                             </div>
                                             <div class="content">
-                                              <h3>主标题3</h3>
+                                              <h3 class="title">主标题3</h3>
                                               <div class="meta">
                                                 <a class="group">副标题</a>
                                               </div>
@@ -180,7 +180,7 @@
                                                 <img src="./img/tx.jpg">
                                             </div>
                                             <div class="content">
-                                              <h3>主标题4</h3>
+                                              <h3 class="title">主标题4</h3>
                                               <div class="meta">
                                                 <a class="group">副标题</a>
                                               </div>
@@ -213,7 +213,7 @@
                                                 <img src="./img/tx.jpg">
                                             </div>
                                             <div class="content">
-                                              <h3>主标题5</h3>
+                                              <h3 class="title">主标题5</h3>
                                               <div class="meta">
                                                 <a class="group">副标题</a>
                                               </div>
@@ -240,7 +240,7 @@
                                                 <img src="./img/tx.jpg">
                                             </div>
                                             <div class="content">
-                                              <h3>主标题6</h3>
+                                              <h3 class="title">主标题6</h3>
                                               <div class="meta">
                                                 <a class="group">副标题</a>
                                               </div>
@@ -273,6 +273,7 @@
     </body>
 </html>
     <!-- 弹窗-->
+        <!-- 下载 -->
         <div class="ui basic small modal"id="dlBox">
             <div class="header" >
                 <h4><i class="download icon"></i>Download</h4>
@@ -287,11 +288,23 @@
             </div>
             <div class="actions">
                 <div class="package-icon"></div>
-                <a class="ui labeled button" data-dismiss="modal" id="close">取消</a>
+                <a class="ui labeled button close" data-dismiss="modal">取消</a>
                 <a class="ui labeled icon teal button"><i class="github icon"></i> Download</a>
             </div>
         </div>
-
+        <!-- 作品详情 -->
+        <div class="ui large modal"id="works-show">
+            <div class="header" >
+                <h4></h4>
+            </div>
+            <div class="content">
+              <img src="" alt="">
+            </div>
+            <div class="actions">
+                <a class="ui labeled button close" data-dismiss="modal">取消</a>
+                <a class="ui labeled icon teal button"><i class="github icon"></i> Download</a>
+            </div>
+        </div>
 <script src="./js/jquery.min.js"></script>
 <script src="./Semantic/semantic.min.js"></script>
 <script src="./js/main.js"></script>
